@@ -18,6 +18,9 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
+service2:
+  type: ClusterIP
+  port: 443
 
 ingress:
   enabled: false
