@@ -9,7 +9,7 @@ replicaCount: 3
 
 image:
   repository: nginx
-  tag: stable
+  tag: test123
   pullPolicy: IfNotPresent
 
 nameOverride: ""
