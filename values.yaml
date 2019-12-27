@@ -5,7 +5,7 @@
 metadata:
   namespace: chris-dev-apps
 
-replicaCount: 3
+replicaCount: 4
 
 image:
   repository: nginx
