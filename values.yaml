@@ -21,7 +21,7 @@ service2:
 
 ingress:
   enabled: false
-  annotations: {}
+  annotations:
     kubernetes.io/ingress.class: nginx
     alb.ingress.kubernetes.io/actions.forward-multiple-tg: {"Type":"forward","ForwardConfig":{"TargetGroups":[{"TargetGroupArn":""arn-of-your-target-group","Weight":80},{"ServiceName":"service-1","ServicePort":"80","Weight":20}],"TargetGroupStickinessConfig":{"Enabled":true,"DurationSeconds":200}}}
     # kubernetes.io/tls-acme: "true"
