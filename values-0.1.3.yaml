@@ -1,12 +1,15 @@
+# Default values for testapp1.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
 
 metadata:
   namespace: chris-dev-apps
 
-replicaCount: 4
+replicaCount: 3
 
 image:
   repository: nginx
-  tag: 1.8.1
+  tag: stable
   pullPolicy: IfNotPresent
 
 nameOverride: ""
@@ -22,8 +25,7 @@ service2:
 ingress:
   enabled: false
   annotations: {}
-    kubernetes.io/ingress.class: nginx
-    alb.ingress.kubernetes.io/actions.forward-multiple-tg: {"Type":"forward","ForwardConfig":{"TargetGroups":[{"TargetGroupArn":""arn-of-your-target-group","Weight":80},{"ServiceName":"service-1","ServicePort":"80","Weight":20}],"TargetGroupStickinessConfig":{"Enabled":true,"DurationSeconds":200}}}
+    # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: chart-example.local
